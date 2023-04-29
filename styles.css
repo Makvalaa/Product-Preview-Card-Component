@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-image-mobile {
+  width: 100%;
+}
+
+.product-image-desktop {
+  width: 300px;
+  display: none;
+} 
+
+.info {
+  display: flex;
+  flex-direction: column;  
+  padding: 20px 25px;
+}
+
+.product {
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 5px;
+  font-family: montserrat;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  color: hsl(212, 21%, 14%);
+  font-family: fraunces;
+  font-size: 32px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: hsl(228, 12%, 48%);
+  font-family: montserrat;
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+
+.price {
+  color: hsl(158, 36%, 37%);
+  font-family: fraunces;
+  font-size: 31px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.old-price {
+  color: hsl(228, 12%, 48%);
+  font-family: montserrat;
+  font-size: 12px;
+  margin-left: 20px;
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  background-color: hsl(158, 36%, 37%);
+  padding: 17px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-to-cart:hover {
+  background-color: hsl(158, 36%, 18%);
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+@media screen and (max-width:599px) {
+  .card {
+    max-width: 345px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    display: grid;
+    grid-template-columns: 300px 300px;  
+  }
+
+  .info {
+    padding: 30px;
+  }
+
+  .product {
+    margin-bottom: 25px;
+  }
+
+  .product-name {
+    margin-bottom: 25px;
+  }
+
+  .description {
+    margin-bottom: 30px;
+  }
+
+  .product-image-desktop {
+    display: block;
+  }
+
+  .product-image-mobile {
+    display: none;
+  }
+
+  .add-to-cart {
+    cursor: pointer;
+    margin-top: 9px;
+  }
+}
